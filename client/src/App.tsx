@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
 function App() {
+	const testingBackend = () => {
+		console.log("HELLO WORLD!");
+		const baseUrl = 'http://localhost:4000/api/add/products'
+		axios
+		.post(baseUrl)
+		.then((response) => {
+			console.log(response);
+		})
+	}
+	
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> ae to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Rea
-        </a>
-      </header>
+			<h1>BAR INVENTORY</h1>
+			<button onClick={testingBackend}>TEST BACKEND</button>
     </div>
   );
 }

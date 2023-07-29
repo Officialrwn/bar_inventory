@@ -1,7 +1,8 @@
-const express = require('express')
-const app = express()
-const port = 4000
+const express = require('express');
+const app = express();
+const port = 4000;
 const db = require('./src/services/db.services.tsx');
+const cors = require('cors');
 
 const insertProducts = async () => {
 	const res = await db.create()
@@ -9,11 +10,15 @@ const insertProducts = async () => {
 	return res;
 }
 
+app.use(cors({
+	origin: "http://localhost:3000"
+}));
+
 app.get('/', (req, res) => {
   res.send('Hello World!');
 })
 
-app.get('/api/add/products', (req, res) => {
+app.post('/api/add/products', (req, res) => {
 	const data = insertProducts();
 	if (!data)
 		res.send("failed to insert!");
