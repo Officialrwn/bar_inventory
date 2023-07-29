@@ -1,4 +1,4 @@
-const db = require('../services/db.services.js');
+const db = require('../services/db.services.tsx');
 
 const insertProducts = async () => {
 	await db.create()

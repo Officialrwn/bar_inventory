@@ -8,7 +8,7 @@ const sqlQuery = (sql) => {
 }
 
 const create = async () => {
-	const item = ['Test', 33, 1, 1, 1]
+	const item = ['Test', 33, 1, 1, 1];
 	try {
 		const query = sqlQuery('db.insert.sql');
 		const res = await pool.query(query, item);

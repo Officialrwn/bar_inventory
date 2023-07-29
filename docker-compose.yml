@@ -1,7 +1,6 @@
 version: '3.9'
 services:
   server:
-    container_name: "server"
     build:
       context: ./server
       dockerfile: Dockerfile
@@ -13,7 +12,6 @@ services:
     depends_on:
       - postgres
   client:
-    container_name: "client"
     build: 
       context: ./client
       dockerfile: Dockerfile
@@ -24,7 +22,7 @@ services:
       - /app/node_modules/
     stdin_open: true
   postgres:
-    container_name: "postgresdb"
+    container_name: "psql"
     image: postgres
     restart: always
     environment:
