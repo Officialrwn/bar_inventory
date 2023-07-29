@@ -1,6 +1,7 @@
 version: '3.9'
 services:
   server:
+    container_name: "server"
     build:
       context: ./server
       dockerfile: Dockerfile
@@ -12,18 +13,18 @@ services:
     depends_on:
       - postgres
   client:
+    container_name: "client"
     build: 
       context: ./client
-        # Name of the dockerfile
       dockerfile: Dockerfile
     ports:
-      # Host port:Container port
       - '3000:3000'
     volumes:
       - ./client:/app
       - /app/node_modules/
     stdin_open: true
   postgres:
+    container_name: "postgresdb"
     image: postgres
     restart: always
     environment:

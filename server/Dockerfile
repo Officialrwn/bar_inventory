@@ -1,5 +1,5 @@
 # It uses node:18-alpine as the base image for the Node.js application
-FROM node:18-alpine
+FROM node:16-alpine
 
 # It installs the nodemon package globally for monitoring and watching the backend Express server
 RUN npm install -g nodemon

@@ -1,5 +1,5 @@
 # It uses node:18-alpine as the base image for the frontend React.js application
-FROM node:18-alpine
+FROM node:16-alpine
 
 # Creating the working directory named `app`
 WORKDIR /app
