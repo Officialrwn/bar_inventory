@@ -4,7 +4,7 @@ import axios from 'axios';
 function App() {
 	const testingBackend = () => {
 		console.log("HELLO WORLD!");
-		const baseUrl = 'http://localhost:4000/api/add/products'
+		const baseUrl = 'http://localhost:4000/api/test'
 		axios
 		.post(baseUrl)
 		.then((response) => {
