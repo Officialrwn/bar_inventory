@@ -1,6 +1,6 @@
-const express = require('express');
-const cors = require('cors');
-const products = require('../controllers/productlist');
+import express from 'express';
+import cors from 'cors';
+import { checkProductType, addProductListItem } from '../controllers/productlist.js';
 
 const app = express();
 const port = 4000;
@@ -16,10 +16,10 @@ app.get('/', (req, res) => {
 })
 
 app.post('/api/add/products', async (req, res) => {
-	if (!req.body || !products.checkProductType(req.query.type)) {
+	if (!req.body || !checkProductType(req.query.type)) {
 		res.sendStatus(500);
 	} else {
-		const data = await products.addProductListItem(req.body, req.query.type);
+		const data = await addProductListItem(req.body, req.query.type);
 		console.log("DATA", data);
 		res.sendStatus(200);
 	}
@@ -31,6 +31,4 @@ const init = () => {
 	})
 }
 
-module.exports = {
-	init
-}
+export { init as serverInit }

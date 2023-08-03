@@ -16,9 +16,9 @@ const removeInventoryItems = () => {
 	console.log("remove items");
 }
 
-module.exports = {
+export { 
 	getInventoryItems,
 	addInventoryItems,
 	updateInventoryItems,
 	removeInventoryItems
-}
+};

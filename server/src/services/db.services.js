@@ -1,6 +1,7 @@
-const pool = require('../configs/db.config.js').pool;
-const fs = require('fs');
-const path = require('path');
+import { pool } from '../configs/db.config.js';
+import fs from 'fs';
+import path from 'path';
+import { __dirname } from '../utils/dirname.js';
 
 const sqlQuery = (sql) => {
 	const basedir = "../sql/";
@@ -17,6 +18,4 @@ const createProduct = async (item) => {
 	}
 }
 
-module.exports = {
-	createProduct,
-}
+export { createProduct };

@@ -1,3 +1,3 @@
-const server = require('./src/services/server.js');
+import { serverInit } from './src/services/server.js';
 
-server.init();
+serverInit();
