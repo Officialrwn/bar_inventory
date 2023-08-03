@@ -5,6 +5,9 @@ const checkProductType = (type) => {
 	return typeList.includes(type);
 }
 
+const getProductListItem = () => {
+	console.log("to do");
+}
 const addProductListItem = async (items, type) => {
 	try {
 		return await Promise.all(items
@@ -21,7 +24,18 @@ const addProductListItem = async (items, type) => {
 	}
 }
 
+const updateProductListItem = () => {
+	console.log("to do");
+}
+
+const removeProductListItem = () => {
+	console.log("to do");
+}
+
 module.exports = {
 	checkProductType,
-	addProductListItem
+	getProductListItem,
+	addProductListItem,
+	updateProductListItem,
+	removeProductListItem
 };
