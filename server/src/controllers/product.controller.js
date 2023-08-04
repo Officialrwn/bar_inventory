@@ -1,13 +1,10 @@
 import { createProduct } from '../services/db.services.js';
-
-const checkProductType = (type) => {
-	const typeList = ['tap', 'litretap', 'alcoholtap', 'bottles', 'liqeur', 'wine', 'misc']; //add to db later
-	return typeList.includes(type);
-}
+import { checkProductType } from '../utils/producttype.js'
 
 const getProductListItem = () => {
 	console.log("to do");
 }
+
 const addProductListItem = async (items, type) => {
 	try {
 		return await Promise.all(items

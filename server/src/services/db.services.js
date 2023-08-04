@@ -1,5 +1,5 @@
 import { pool } from '../configs/db.config.js';
-import { loadSqlQuery } from '../utils/sql.file.query.js';
+import { loadSqlQuery } from '../utils/filequery.js';
 
 const createProduct = async (item) => {
 	try {
