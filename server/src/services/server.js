@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import * as apiroutes from '../apiroutes/index.js';
+import * as apiroutes from '../controllers/routes.js';
 
 const app = express();
 const port = 4000;
@@ -23,4 +23,4 @@ const init = () => {
 	})
 }
 
-export { init as serverInit }
+export { init }

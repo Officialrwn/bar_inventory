@@ -1,5 +1,5 @@
 import express from 'express';
-import { checkProductType, addProductListItem } from '../controllers/productlist.js';
+import { checkProductType, addProductListItem } from '../controllers/product.controller.js';
 
 const app = express();
 
@@ -13,4 +13,4 @@ app.post('/api/add/products', async (req, res) => {
 	}
 })
 
-export { app as productListRoutes };
+export { app as productApiRoutes };
