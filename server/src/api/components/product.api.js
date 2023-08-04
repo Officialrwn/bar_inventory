@@ -1,5 +1,5 @@
 import express from 'express';
-import { checkProductType, addProductListItem } from '../controllers/product.controller.js';
+import { checkProductType, addProductListItem } from '../../controllers/product.controller.js';
 
 const app = express();
 
