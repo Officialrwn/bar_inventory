@@ -1,21 +1,18 @@
-import './App.css';
-import axios from 'axios';
+import './styles/app.css'
+import Home from './pages/Home/Home'
+import SideBar from './components/SideBar/SideBar'
+import NavBar from './components/NavBar/NavBar'
 
-function App() {
-	const testingBackend = () => {
-		console.log("HELLO WORLD!");
-		const baseUrl = 'http://localhost:4000/api/test'
-		axios
-		.post(baseUrl)
-		.then((response) => {
-			console.log(response);
-		})
-	}
-	
+
+const App = () => {
   return (
     <div className="App">
-			<h1>BAR INVENTORY</h1>
-			<button onClick={testingBackend}>TEST BACKEND</button>
+			<NavBar/>
+			<div className="line"></div>
+			<div className="main">
+				<SideBar/>
+				<Home/>
+			</div>
     </div>
   );
 }
