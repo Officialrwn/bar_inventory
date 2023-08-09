@@ -30,17 +30,21 @@ const Content = styled.div`
 	justify-content: space-between;
 `;
 
-const Date = styled.h2`
-	display: flex;
+const CurrentDate = styled.h1`
 `
 
 const Page = styled.h1`
-	display: flex;
-	justify-self: center;
+	font-size: 2.8vw;
 `
+
+const Button = styled.h1`
+`;
 
 export { 
 	Main,
 	Title,
-	Content
+	Content,
+	CurrentDate,
+	Page,
+	Button
 }

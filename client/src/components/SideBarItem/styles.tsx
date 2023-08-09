@@ -4,6 +4,7 @@ const Main = styled.div`
 	display: flex;
 	align-items: center;
 	padding-left: 2.5vw;
+	margin-top: -3vh;
 	color: #C8C3C3;
 `;
 
@@ -14,8 +15,8 @@ const NavLink = styled.p`
 `;
 
 const NavIcon = styled.img`
-	width: 10%;
-	height: 40%;
+	max-width: 10%;
+	max-height: 35%;
 `;
 
 export { 
