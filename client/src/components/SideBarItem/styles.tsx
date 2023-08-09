@@ -10,12 +10,12 @@ const Main = styled.div`
 const NavLink = styled.p`
 	font-size: 2.5vh;
 	font-weight: bold;
-	padding-left: 1vw;
+	padding-left: 0.5vw;
 `;
 
 const NavIcon = styled.img`
-	width: 15%;
-	height: 55%;
+	width: 10%;
+	height: 40%;
 `;
 
 export { 
