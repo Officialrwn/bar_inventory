@@ -14,9 +14,8 @@ const Title = styled.div`
 	text-align: center;
 	line-height: 1;
 	color: white;
-	font-family: "Inria-sans Bold";
 	font-size: 3.5vh;
-	min-width: 18%;
+	min-width: 13%;
 	height: 100%;
 	background-color: #4C6085;
 `;
@@ -24,8 +23,7 @@ const Title = styled.div`
 const Content = styled.div`
 	display: flex;
 	width: 100vw;
-	padding-left: 1vw;
-	padding-right: 1vw;
+	padding: 0 2vw 0 2vw;
 	align-items: center;
 	justify-content: space-between;
 `;
