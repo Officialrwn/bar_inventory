@@ -2,12 +2,11 @@ import styled from 'styled-components'
 
 const Main = styled.div`
 	display: flex;
-	height: 100vh;
-	min-width: 14vw;
-	padding: 1vw;
+	height: 100%;
+	width: 18%;
 	flex-direction: column;
-	border-right: solid;
-	background-color: #D7D7D7;
+	background-color: #32322C;
+	color: #C8C3C3;
 `;
 
 export { 

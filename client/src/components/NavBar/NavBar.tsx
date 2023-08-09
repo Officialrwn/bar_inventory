@@ -3,7 +3,8 @@ import { Main, Title, Content } from './styles'
 const NavBar = () => (
 	<Main>
 		<Title>
-			Inventory
+			INVENTORY<br/>
+			SYSTEM
 		</Title>
 		<Content>
 			<h2>Date</h2>

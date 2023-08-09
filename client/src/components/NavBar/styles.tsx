@@ -2,18 +2,23 @@ import styled from 'styled-components'
 
 const Main = styled.div`
 	display: flex;
-	width: 100vw;
 	align-items: center;
+	height: 12vh;
 	background-color: #D7D7D7;
 `;
 
-const Title = styled.h1`
+const Title = styled.div`
 	display: flex;
-	min-width: 14vw;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
-	background-color: #D7D7D7;
-	padding-left: 1vw;
-	padding-right: 1vw;
+	line-height: 1;
+	color: white;
+	font-family: "Inria-sans Bold";
+	font-size: 3.5vh;
+	min-width: 18%;
+	height: 100%;
+	background-color: #4C6085;
 `;
 
 const Content = styled.div`
@@ -21,7 +26,6 @@ const Content = styled.div`
 	width: 100vw;
 	padding-left: 1vw;
 	padding-right: 1vw;
-	border-left: solid;
 	align-items: center;
 	justify-content: space-between;
 `;
