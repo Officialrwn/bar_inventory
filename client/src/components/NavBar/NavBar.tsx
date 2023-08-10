@@ -1,8 +1,6 @@
 import { Main, Title, Content, CurrentDate, Page, Button } from './styles'
 import { useEffect, useState } from 'react';
 
-
-
 const NavBar = ({ page }: any) => {
 	const getCurrentDate = () => {
 		const options: Intl.DateTimeFormatOptions = { day: "numeric", month: "long", year: "numeric" };
