@@ -1,4 +1,4 @@
-import { Main } from './styles'
+import { Main, Page } from './styles'
 
 const Home = () => (
 	<Main>

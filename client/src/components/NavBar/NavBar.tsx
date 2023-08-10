@@ -1,14 +1,18 @@
 import { Main, Title, Content, CurrentDate, Page, Button } from './styles'
 import { useEffect, useState } from 'react';
 
-const NavBar = ({ page }: any) => {
-	const options: Intl.DateTimeFormatOptions = { day: "numeric", month: "long", year: "numeric" };
-	const newDate = new Date().toLocaleString("fi-FI", options).toLocaleUpperCase();
-	const [currentDate, setCurrentDate] = useState(newDate);
-	const dayInMs = 1000 * 60 * 60 * 24;
 
+
+const NavBar = ({ page }: any) => {
+	const getCurrentDate = () => {
+		const options: Intl.DateTimeFormatOptions = { day: "numeric", month: "long", year: "numeric" };
+		return new Date().toLocaleString("fi-FI", options).toLocaleUpperCase();
+	}
+
+	const [currentDate, setCurrentDate] = useState(getCurrentDate());
 	useEffect(() => {
-		setInterval(() => setCurrentDate(newDate), dayInMs);
+		const dayInMs = 1000 * 60 * 60 * 24;
+		setInterval(() => setCurrentDate(getCurrentDate), dayInMs);
 	}, []);
 	return (
 		<Main>
