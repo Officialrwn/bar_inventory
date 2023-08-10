@@ -1,7 +1,7 @@
 import { Main, Page, Line } from './styles'
+import { Outlet } from "react-router-dom";
 import SideBar from '../../components/SideBar/SideBar';
 import NavBar from '../../components/NavBar/NavBar';
-import { Outlet } from "react-router-dom";
 
 const Layouts = () => (
 	<Main>

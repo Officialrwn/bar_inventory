@@ -1,16 +1,17 @@
 import styled from 'styled-components'
+import { Link } from "react-router-dom";
 
 const Main = styled.div`
 	display: flex;
 	align-items: center;
 	padding-left: 2vw;
-	margin-top: -3vh;
 	color: #C8C3C3;
 `;
 
-const NavLink = styled.p`
-	font-size: 2.5vh;
-	font-weight: bold;
+const NavLink = styled(Link)`
+	text-decoration: none;
+	color: #C8C3C3;
+	font-size: 3vh;
 	padding-left: 0.5vw;
 `;
 

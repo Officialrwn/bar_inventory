@@ -1,19 +1,13 @@
 import { Main, NavLink, NavIcon } from './styles'
-import { Route, Routes } from "react-router-dom";
-import Inventory from '../../pages/Inventory/Inventory';
+import { Link } from "react-router-dom";
 
 const SideBarItem = ({title}: any) => {
 	const imglink = `/assets/images/${title?.toLowerCase()}.png`
-	const route = () => {
-		console.log("Route");
-	}
+	const route = `/${title.replace(/\s/g, '')}`;
 	return	(
-		<Main onClick={route}>
+		<Main>
 			<NavIcon src={imglink}/>
-			{/* <Routes> */}
-				{/* <Route path={`/inventory}`} element={<Inventory/>}/> */}
-			{/* </Routes> */}
-			<NavLink>{title}</NavLink>
+			<NavLink to={route}>{title}</NavLink>
 		</Main>
 		)
 	}

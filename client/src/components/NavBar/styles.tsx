@@ -15,7 +15,7 @@ const Title = styled.div`
 	line-height: 1;
 	color: white;
 	font-size: 3.5vh;
-	min-width: 13%;
+	min-width: 16%;
 	height: 100%;
 	background-color: #4C6085;
 `;
