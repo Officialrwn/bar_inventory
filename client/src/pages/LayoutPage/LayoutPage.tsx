@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import SideBar from '../../components/SideBar/SideBar';
 import NavBar from '../../components/NavBar/NavBar';
 
-const Layouts = () => (
+const LayoutPage = () => (
 	<Main>
 		<NavBar/>
 		<Line/>
@@ -14,4 +14,4 @@ const Layouts = () => (
 	</Main>
 	)
 
-export default Layouts
+export default LayoutPage
