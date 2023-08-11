@@ -1,5 +1,5 @@
-import { Main } from './styles'
-import SideBarItem from '../SideBarItem/SideBarItem'
+import { Main } from './styles';
+import SideBarItem from '../SideBarItem/SideBarItem';
 
 const SideBar = () => {
 	const NavLinks = [
@@ -12,11 +12,11 @@ const SideBar = () => {
 		'Settings'
 	]
 	return (
-	<Main>
-		{ NavLinks.map((link) => {
-			return <SideBarItem key={link} title={link}/>;
-		})}
-	</Main>
+		<Main>
+			{ NavLinks.map((link: string) => {
+				return <SideBarItem key={link} title={link} />;
+			})}
+		</Main>
 	)
 }
 

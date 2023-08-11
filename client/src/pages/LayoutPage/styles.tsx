@@ -20,5 +20,5 @@ const Line = styled.div`
 export { 
 	Main,
 	Page,
-	Line
+	Line,
 }
