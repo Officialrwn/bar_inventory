@@ -18,4 +18,5 @@ const SideBarItem = ({title}: StringKeyObject<string>) => {
 		</Main>
 	)
 }
+
 export default SideBarItem
