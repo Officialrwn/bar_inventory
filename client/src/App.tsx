@@ -1,5 +1,5 @@
-import './styles/app.css';
-import './fonts/Inria_Sans/InriaSans-Bold.ttf';
+import './assets/css/app.css';
+import './assets/fonts/Inria_Sans/InriaSans-Bold.ttf';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LayoutPage from './pages/LayoutPage/LayoutPage';
 import HomePage from './pages/HomePage/HomePage';

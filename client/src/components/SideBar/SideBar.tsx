@@ -1,5 +1,5 @@
 import { Main } from './styles';
-import { NavLinks } from '../../constants';
+import { NavLinks } from '../../data/constants';
 import SideBarItem from '../SideBarItem/SideBarItem';
 
 const SideBar = () => {

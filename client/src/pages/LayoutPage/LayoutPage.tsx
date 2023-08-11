@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import SideBar from '../../components/SideBar/SideBar';
 import NavBar from '../../components/NavBar/NavBar';
 import { useState } from 'react';
-import { PageContext } from '../../pageContext';
+import { PageContext } from '../../context/pageContext';
 
 
 const LayoutPage = () => {
