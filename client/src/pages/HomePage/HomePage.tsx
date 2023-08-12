@@ -1,8 +1,16 @@
-import { Main } from './styles'
+import HomeComponent from '../../components/HomeComponent/HomeComponent'
+import { HomeComponentList } from '../../data/constants'
+import { Main, Header, Content } from './styles'
+
 
 const HomePage = () => (
 	<Main>
-		<h1>Home</h1>
+		<Header><h1>Information</h1></Header>
+		<Content>
+			{ HomeComponentList.sort().map((item) => {
+					return <HomeComponent key={item} title={item}/>
+			})}
+		</Content>
 	</Main>
 	)
 

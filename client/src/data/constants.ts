@@ -8,6 +8,14 @@ const NavLinks = [
 	'Settings'
 ];
 
+const HomeComponentList = [
+	'Product List',
+	'Add Deliveries',
+	'Order List',
+	'Automatic Sales Report',
+]
+
 export {
-	NavLinks
+	NavLinks,
+	HomeComponentList
 }
