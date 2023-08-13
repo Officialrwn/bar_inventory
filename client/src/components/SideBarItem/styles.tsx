@@ -5,7 +5,6 @@ const Main = styled.div`
 	display: flex;
 	align-items: center;
 	padding-left: 1.5vw;
-	color: #C8C3C3;
 `;
 
 const NavLink = styled(Link)`

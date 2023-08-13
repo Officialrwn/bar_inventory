@@ -5,6 +5,7 @@ const Main = styled.div`
 	align-items: center;
 	height: 12vh;
 	background-color: #D7D7D7;
+	color: black;
 `;
 
 const Title = styled.div`

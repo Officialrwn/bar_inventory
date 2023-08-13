@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
 const Main = styled.div`
-	display: flex;
-	flex: 1;
-	padding-top: 2vh;
-	flex-direction: column;
-	background-color: #D7D7D7;
+display: flex;
+width: 80%;
+margin: 3.5vh;
+flex-direction: column;
+border-style: solid;
 `;
 
-const Page = styled.div`
+const Content = styled.div`
 	display: flex;
 	flex-direction: column;
 	background-color: #D7D7D7;
@@ -16,5 +16,5 @@ const Page = styled.div`
 
 export { 
 	Main,
-	Page
+	Content
 }

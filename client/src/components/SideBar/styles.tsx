@@ -6,7 +6,6 @@ const Main = styled.div`
 	flex-direction: column;
 	padding-top: 5vh;
 	background-color: #32322C;
-	color: #C8C3C3;
 `;
 
 export { 

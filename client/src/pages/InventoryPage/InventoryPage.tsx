@@ -1,8 +1,9 @@
-import { Main, Page } from './styles'
+import BoxComponent from '../../components/BoxComponent/BoxComponent'
+import { Main, Content } from './styles'
 
 const InventoryPage = () => (
 	<Main>
-		<h1>Inventory</h1>
+		<BoxComponent/>
 	</Main>
 	)
 

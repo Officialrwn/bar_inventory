@@ -12,6 +12,6 @@ const HomePage = () => (
 			})}
 		</Content>
 	</Main>
-	)
+)
 
 export default HomePage

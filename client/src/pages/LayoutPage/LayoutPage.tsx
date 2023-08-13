@@ -8,7 +8,7 @@ import NavBar from '../../components/NavBar/NavBar';
 
 const LayoutPage = () => {
 	const [page, setPage] = useState('Home');
-	
+
 	return	(
 		<Main>
 			<NavBar page={page}/>
@@ -20,6 +20,6 @@ const LayoutPage = () => {
 				<Outlet/>
 			</Page>
 		</Main>
-		)
-	}
+	)
+}
 export default LayoutPage
