@@ -1,52 +1,60 @@
 import styled from 'styled-components'
 
 const Main = styled.div`
+	display: flex;
+	width: 100%;
+	> * {
+		&:nth-child(6) {
+			flex: 2;
+		}
+		&:last-child {
+			flex: 1;
+		}
+	}
 `;
 
-const TitleHeader = styled.div`
+const Title = styled.p<{ isFirst: boolean }>`
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
-	padding-right: 6vw;
-	height: 112px;
+	padding-left: 2.5vw;
+	padding-right: 0.5vw;
+	height: 8vh;
+	margin: 0;
 	background-color: #32322C;
-	> * {
-		&:first-child {
-		padding-right: 3vw;
-	}
-`
-
-const Title = styled.p`
-	padding: 0 0 0 1vw;
 	text-align: right;
-	font-size: 1.7vw;
+	font-size: 1.6vw;
 	line-height: 1;
+	${({ isFirst }) => 
+		isFirst &&
+		`
+		padding-left: 1vw;
+		padding-right: 2vw;
+	`}
 `
 
 const ItemBox = styled.div`
 	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	border-style: solid;
-	padding-right: 6vw;
-	color: black;
-	height: 100px;
-	> * {
-		&:first-child {
-		padding-right: 3vw;
-	}
+	flex-direction: column;
+
 `
 
-const Item = styled.p`
-	padding: 0 0 0 1vw;
-	text-align: right;
+const Item = styled.div<{ isFirst: boolean }>`
+	display: flex;
+	justify-content: end;
+	margin: 0;
+	padding: 1vh 0.5vw 1vh 0;
+	background-color: white;
+	color: black;
 	font-size: 1.7vw;
 	line-height: 1;
+	${({ isFirst }) => isFirst &&`
+		justify-content: start;
+		padding-left: 1vw;
+	`}
 `
 
 export { 
 	Main,
-	TitleHeader,
 	Title,
 	ItemBox,
 	Item

@@ -1,5 +1,5 @@
 import BoxComponent from '../../components/BoxComponent/BoxComponent'
-import { Main, Content } from './styles'
+import { Main } from './styles'
 
 const InventoryPage = () => (
 	<Main>

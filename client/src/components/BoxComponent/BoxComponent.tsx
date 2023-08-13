@@ -1,4 +1,4 @@
-import { Main, TitleHeader, Title, ItemBox, Item } from './styles'
+import { Main, Title, ItemBox, Item } from './styles'
 
 const BoxComponent = () => {
 	const titles = [
@@ -7,29 +7,20 @@ const BoxComponent = () => {
 		{ name: 'In Stock', desc: 'tap num' },
 		{ name: 'Low Stock', desc: 'threshold qty' },
 		{ name: 'Stock Order', desc: 'min. qty' },
-		{ name: 'Placeholder', desc: '' },
-		{ name: 'Supplier', desc: '' }
+		{ name: '', desc: '' },
+		{ name: 'Supplier', desc: '' },
+		{ name: '', desc: '' }
 	]
 	return	(
 		<Main>
-			<TitleHeader>
-				{ titles.map((title) => {
-					return (
-						<Title key={title.name}>
-								{title.name}<br/> { title.desc ? `(${title.desc})` : '' }
-							</Title>
-						)
-					})}
-			</TitleHeader>
-			<ItemBox>
-			{ titles.map((title) => {
+			{ titles.map((title, index) => {
 				return (
-					<Item key={title.name}>
-							{title.name}
-						</Item>
-					)
-				})}
-			</ItemBox>
+					<ItemBox key={title.name}>
+						<Title isFirst={!index}>{title.name}<br/>{ title.desc ? `(${title.desc})` : ''}</Title>
+						<Item isFirst={!index}>Test</Item>
+					</ItemBox>
+				)
+			})}
 		</Main>
 	)
 }
