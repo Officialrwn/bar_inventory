@@ -7,7 +7,6 @@ const TitleHeader = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	border-style: solid;
 	padding-right: 6vw;
 	height: 112px;
 	background-color: #32322C;

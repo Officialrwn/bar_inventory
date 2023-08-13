@@ -5,7 +5,6 @@ display: flex;
 width: 80%;
 margin: 3.5vh;
 flex-direction: column;
-border-style: solid;
 `;
 
 const Content = styled.div`
