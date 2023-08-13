@@ -87,11 +87,11 @@ const BoxComponent = () => {
 				return (
 					<ItemBox key={title.name}>
 						<Title $index={index}>
-							{ index != 5 && index != 7 ? title.name : '' }<br/>
+							{ index !== 5 && index !== 7 ? title.name : '' }<br/>
 							{ title.unit ? `(${title.unit})` : ''}
 						</Title>
 						{ products.map((item, i) => (
-							index == lastIndex ? 
+							index === lastIndex ? 
 							<IconBox key={i}>
 								<Icon src={modify} alt={modify}/>
 								<Icon src={remove} alt={remove}/>

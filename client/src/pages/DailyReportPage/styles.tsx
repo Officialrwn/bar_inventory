@@ -8,13 +8,6 @@ const Main = styled.div`
 	background-color: #D7D7D7;
 `;
 
-const Page = styled.div`
-	display: flex;
-	flex-direction: column;
-	background-color: #D7D7D7;
-`;
-
 export { 
 	Main,
-	Page
 }

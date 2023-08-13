@@ -25,7 +25,7 @@ const Title = styled.p<{ $index: number }>`
 	font-size: 1.6vw;
 	line-height: 1;
 	${({ $index }) => 
-		($index == 0) &&
+		($index === 0) &&
 		`
 		padding-left: 1vw;
 		padding-right: 2vw;
@@ -50,7 +50,7 @@ const Item = styled.div<{ $index: number }>`
 	color: black;
 	font-size: 1.4vw;
 	line-height: 1;
-	${({ $index }) => $index == 0 &&`
+	${({ $index }) => $index === 0 &&`
 		justify-content: start;
 		padding-left: 1vw;
 	`}
