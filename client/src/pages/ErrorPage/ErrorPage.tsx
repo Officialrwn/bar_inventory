@@ -1,4 +1,4 @@
-import { Main, Page } from './styles'
+import { Main } from './styles'
 
 const ErrorPage = () => (
 	<Main>

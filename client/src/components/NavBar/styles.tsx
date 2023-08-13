@@ -37,6 +37,8 @@ const Page = styled.h1`
 `
 
 const Button = styled.h1`
+	padding: 0.5vh 1vw 0.5vh 1vw;
+	border-style: solid;
 `;
 
 export { 

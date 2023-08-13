@@ -17,7 +17,7 @@ const LayoutPage = () => {
 				<PageContext.Provider value={{ setPage }}>
 					<SideBar />
 				</PageContext.Provider>
-				<Outlet/>
+				<Outlet />
 			</Page>
 		</Main>
 	)
