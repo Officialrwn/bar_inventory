@@ -1,12 +1,12 @@
 import { Main } from './styles';
-import { NavLinks } from '../../data/constants';
+import { NavList } from '../../data/constants';
 import SideBarItem from '../SideBarItem/SideBarItem';
 
 const SideBar = () => {
 	return (
 		<Main>
-			{ NavLinks.map((link: string) => {
-				return <SideBarItem key={link} title={link} />;
+			{ NavList.map((link: { name: string, path: string }) => {
+				return <SideBarItem key={link.name} title={link.name} />;
 			})}
 		</Main>
 	)

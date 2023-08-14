@@ -2,8 +2,7 @@ import styled from 'styled-components'
 
 const Main = styled.div`
 	display: flex;
-	width: 80%;
-	padding: 3.5vh;
+	flex: 1;
 	flex-direction: column;
 `;
 

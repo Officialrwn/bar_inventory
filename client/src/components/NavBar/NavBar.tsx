@@ -1,7 +1,8 @@
+import { StringKeyObject } from '../../types/types';
 import { Main, Title, Content, CurrentDate, Page, Button } from './styles'
 import { useEffect, useState } from 'react';
 
-const NavBar = ({ page }: any) => {
+const NavBar = ({ page }: StringKeyObject<string>) => {
 	const getCurrentDate = () => {
 		const options: Intl.DateTimeFormatOptions = { day: "numeric", month: "long", year: "numeric" };
 		return new Date().toLocaleString("fi-FI", options).toLocaleUpperCase();

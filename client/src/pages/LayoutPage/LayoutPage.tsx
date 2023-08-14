@@ -1,14 +1,18 @@
 import { Main, Page, Line, Content } from './styles'
-import { Outlet } from "react-router-dom";
-import { useState } from 'react';
+import { Outlet, useLocation } from "react-router-dom";
+import { useState, useEffect } from 'react';
 import { PageContext } from '../../context/pageContext';
 import SideBar from '../../components/SideBar/SideBar';
 import NavBar from '../../components/NavBar/NavBar';
-import Footer from '../../components/Footer/Footer';
-
+import { NavList } from '../../data/constants';
 
 const LayoutPage = () => {
 	const [page, setPage] = useState('Home');
+	const currentPage = useLocation().pathname;
+	
+	useEffect(() => {
+		console.log(currentPage);
+	});	 
 
 	return	(
 		<Main>
