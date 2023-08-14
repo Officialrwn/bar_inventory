@@ -10,5 +10,5 @@
 	color: #C8C3C3;
 	flex-direction: column;
 	height: 100vh;
-	overflow-x: hidden;
+	overflow: hidden;
 }
