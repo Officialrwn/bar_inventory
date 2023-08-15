@@ -1,11 +1,14 @@
 import { BoxComponentType } from '../../types/BoxComponentType';
-import BoxContent from '../BoxContent/BoxContent';
 import { Header } from './styles'
+import BoxContent from '../BoxContent/BoxContent';
+import { BoxComponentContext } from '../../context/BoxComponentContext';
 
-const BoxComponent = ({category, products}: BoxComponentType) =>	(
+const BoxComponent = ({category }: BoxComponentType) =>	(
 	<>
 		<Header>{category.header} Products</Header>
-		<BoxContent header={category.titles} products={products}/>
+		<BoxComponentContext.Provider value={{category}}>
+			<BoxContent />
+		</BoxComponentContext.Provider>
 	</>
 )
 
