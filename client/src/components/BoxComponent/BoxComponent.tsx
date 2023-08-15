@@ -1,27 +1,12 @@
-import BoxIcons from '../BoxIcons/BoxIcons';
-import { Main, Title, ItemBox, Item } from './styles'
+import { BoxComponentType } from '../../types/BoxComponentType';
+import BoxContent from '../BoxContent/BoxContent';
+import { Header } from './styles'
 
-const BoxComponent = ({header, products}: any) => {
-	const lastIndex = header.titles.length - 1;
-	return	(
-		<Main>
-			{ header.titles.map((title: any, index: any) => {
-				return (
-					<ItemBox key={title.name}>
-						<Title $index={index}>
-							{ index !== 5 && index !== 7 ? title.name : '' }<br/>
-							{ title.unit ? `(${title.unit})` : ''}
-						</Title>
-						{ products.map((item: any, i: any) => (
-							index === lastIndex
-							? <BoxIcons key={i}/>
-							:	<Item key={i} $index={index}>{item[index]}</Item>
-							))}
-					</ItemBox>
-				)
-			})}
-		</Main>
-	)
-}
+const BoxComponent = ({category, products}: BoxComponentType) =>	(
+	<>
+		<Header>{category.header} Products</Header>
+		<BoxContent header={category.titles} products={products}/>
+	</>
+)
 
 export default BoxComponent
