@@ -1,19 +1,13 @@
 import { Main, NavLink, NavIcon } from './styles'
-import { PageContext } from '../../context/pageContext';
-import { useContext } from 'react';
-import { StringKeyObject } from '../../types/types';
-import { PageContextType } from '../../types/PageContextType';
 
-const SideBarItem = ({title}: StringKeyObject<string>) => {
-	const imglink = require(`../../assets/images/${title?.toLowerCase()}.png`)
-	const route = title == '/' ? 'Home' : `/${title.replace(/\s/g, '')}`;
-	const { setPage } = useContext(PageContext) as PageContextType;
+const SideBarItem = ({route}: any) => {
+	const imglink = require(`../../assets/images/${route.name?.toLowerCase()}.png`)
 
 	return	(
 		<Main>
-			<NavIcon src={imglink} alt={title}/>
-			<NavLink onClick={() => {setPage(title)}} to={route}>
-				{title}
+			<NavIcon src={imglink} alt={route.name}/>
+			<NavLink to={route.path}>
+				{route.name}
 			</NavLink>
 		</Main>
 	)

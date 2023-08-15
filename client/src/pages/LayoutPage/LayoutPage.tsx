@@ -16,20 +16,20 @@ const LayoutPage = () => {
 			if (page.path === currentLocation)
 				setPage(page.name);
 		});
-	},[page]);	 
+	},[currentLocation]);	
 
 	return	(
 		<Main>
-			<NavBar page={page}/>
-			<Line/>
-			<Page>
-				<PageContext.Provider value={{ setPage }}>
+			<PageContext.Provider value={{ page }}>
+				<NavBar/>
+				<Line/>
+				<Page>
 					<SideBar />
-				</PageContext.Provider>
-				<Content>
-					<Outlet/>
-				</Content>
-			</Page>
+					<Content>
+						<Outlet/>
+					</Content>
+				</Page>
+			</PageContext.Provider>
 		</Main>
 	)
 }
