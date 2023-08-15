@@ -1,11 +1,12 @@
 import { Main } from './styles';
 import { NavList } from '../../data/constants';
 import SideBarItem from '../SideBarItem/SideBarItem';
+import { NavListType } from '../../types/NavListType';
 
 const SideBar = () => {
 	return (
 		<Main>
-			{ NavList.map((link: { name: string, path: string }) => {
+			{ NavList.map((link: NavListType) => {
 				return <SideBarItem key={link.name} title={link.name} />;
 			})}
 		</Main>

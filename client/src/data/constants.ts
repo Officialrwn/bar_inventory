@@ -14,8 +14,89 @@ const HomeComponentList = [
 	'Order List',
 	'Automatic Sales Report',
 ]
+const tapInventoryHeader = {
+	header: 'Tap',
+	titles: [
+		{ name: 'Item Name', unit: '' },
+		{ name: 'Sale Size', unit: 'cl' },
+		{ name: 'In Stock', unit: 'tap num' },
+		{ name: 'Low Stock', unit: 'threshold qty' },
+		{ name: 'Stock Order', unit: 'min. qty' },
+		{ name: '-', unit: '' },
+		{ name: 'Supplier', unit: '' },
+		{ name: 'icon', unit: ''}
+	]
+}
+	
+const products = [
+	[ 
+		'AURA III',
+		'50',
+		'213214',
+		'555',
+		'555',
+		'-',
+		'Hartwall',
+	],
+	[ 
+		'AURA III',
+		'50',
+		'213214',
+		'555',
+		'555',
+		'-',
+		'Hartwall',
+	],
+	[ 
+		'AURA III',
+		'50',
+		'213214',
+		'555',
+		'555',
+		'-',
+		'Hartwall',
+	],
+	[ 
+		'AURA III',
+		'50',
+		'213214',
+		'555',
+		'555',
+		'-',
+		'Hartwall',
+	],
+	[ 
+		'AURA III',
+		'50',
+		'213214',
+		'555',
+		'555',
+		'-',
+		'Hartwall',
+	],
+	[ 
+		'AURA III',
+		'50',
+		'213214',
+		'555',
+		'555',
+		'-',
+		'Hartwall',
+	],
+	[ 
+		'Test11',
+		'Test22',
+		'Test33',
+		'Test44',
+		'Test55',
+		'-',
+		'PM Juoma',
+	]
+]
 
 export {
 	NavList,
-	HomeComponentList
+	HomeComponentList,
+	products,
+	tapInventoryHeader,
 }
