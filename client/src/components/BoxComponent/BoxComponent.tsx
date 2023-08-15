@@ -3,7 +3,7 @@ import { Header } from './styles'
 import BoxContent from '../BoxContent/BoxContent';
 import { BoxComponentContext } from '../../context/BoxComponentContext';
 
-const BoxComponent = ({category }: BoxComponentType) =>	(
+const BoxComponent: React.FC<BoxComponentType> = ({category}) =>	(
 	<>
 		<Header>{category.header} Products</Header>
 		<BoxComponentContext.Provider value={{category}}>
