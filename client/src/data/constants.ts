@@ -24,7 +24,7 @@ const tapInventoryHeader = {
 		{ name: 'Stock Order', unit: 'min. qty' },
 		{ name: '-', unit: '' },
 		{ name: 'Supplier', unit: '' },
-		{ name: 'icon', unit: ''}
+		{ name: '-', unit: ''}
 	],
 	products: [
 		[ 
