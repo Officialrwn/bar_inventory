@@ -90,7 +90,13 @@ const tapInventoryHeader = {
 			'-',
 			'PM Juoma',
 		]
-	]
+	],
+	icons: {
+		add: true,
+		remove: true,
+		modify: true,
+		changeOrder: true,
+	}
 }
 
 export {
