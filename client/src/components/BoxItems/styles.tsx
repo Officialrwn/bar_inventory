@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 
+const Main = styled.div`
+`
+
 const BoxItem = styled.div<{ $index: number }>`
 	display: flex;
 	justify-content: end;
@@ -18,6 +21,7 @@ const BoxItem = styled.div<{ $index: number }>`
 	`}
 `
 
-export { 
+export {
+	Main,
 	BoxItem
 }
