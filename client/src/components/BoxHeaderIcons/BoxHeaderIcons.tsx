@@ -12,7 +12,8 @@ const BoxHeaderIcons: React.FC = () => {
 	const changeIcon = category.icons.changeOrder ? <IconBox><Icon src={change} alt={change}/><IconDesc>Change Order</IconDesc></IconBox> : null;
 	return	(
 		<Main>
-			{[addIcon, changeIcon]}
+			{addIcon}
+			{changeIcon}
 		</Main>
 	)
 }

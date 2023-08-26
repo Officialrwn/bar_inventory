@@ -12,7 +12,8 @@ const BoxIcons: React.FC = () => {
 	const removeIcon = category.icons.remove ? <Icon src={remove} alt={remove}/> : null;
 	return	(
 		<Main>
-			{[modifyIcon, removeIcon]}
+			{modifyIcon} 
+			{removeIcon}
 		</Main>
 	)
 }
