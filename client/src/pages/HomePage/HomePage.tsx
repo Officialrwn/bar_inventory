@@ -3,7 +3,7 @@ import { HomeComponentList } from '../../data/constants'
 import { Main, Header, Content } from './styles'
 
 
-const HomePage = () => (
+const HomePage: React.FC = () => (
 	<Main>
 		<Header><h1>Information</h1></Header>
 		<Content>

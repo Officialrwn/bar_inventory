@@ -7,7 +7,7 @@ import SideBar from '../../components/SideBar/SideBar';
 import NavBar from '../../components/NavBar/NavBar';
 import { NavListType } from '../../types/NavListType';
 
-const LayoutPage = () => {
+const LayoutPage: React.FC = () => {
 	const [page, setPage] = useState('Home');
 	const currentLocation = useLocation().pathname.toLowerCase();
 	

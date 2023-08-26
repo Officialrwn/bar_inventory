@@ -6,7 +6,7 @@ import { StringKeyObject } from '../../types/types';
 import BoxItems from '../BoxItems/BoxItems';
 import BoxTitles from '../BoxTitles/BoxTitles';
 
-const BoxContent = () => {
+const BoxContent: React.FC = () => {
 	const { category } = useContext(BoxComponentContext) as BoxComponentType;
 
 	return	(

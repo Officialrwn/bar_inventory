@@ -6,11 +6,11 @@ type BoxTitlesType = {
 	index: number
 }
 
-const BoxTitles = ({title, index}: BoxTitlesType) => (
-		<Title $index={index}>
-			{ title.name !== '-' ? title.name : '' }<br/>
-			{ title.unit ? `(${title.unit})` : ''}
-		</Title>
-	)
+const BoxTitles: React.FC<BoxTitlesType> = ({title, index}) => (
+	<Title $index={index}>
+		{ title.name === '-' ? '' : title.name }<br/>
+		{ title.unit ? `(${title.unit})` : ''}
+	</Title>
+)
 
 export default BoxTitles

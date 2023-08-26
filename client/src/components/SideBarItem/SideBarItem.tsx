@@ -1,6 +1,11 @@
+import { NavListType } from '../../types/NavListType'
 import { Main, NavLink, NavIcon } from './styles'
 
-const SideBarItem = ({route}: any) => {
+type RouteType = {
+	route: NavListType
+}
+
+const SideBarItem: React.FC<RouteType> = ({route}) => {
 	const imglink = require(`../../assets/images/${route.name?.toLowerCase()}.png`)
 
 	return	(
