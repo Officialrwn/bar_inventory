@@ -5,14 +5,13 @@ import { PageContext } from '../../context/pageContext';
 import { NavList } from '../../data/constants';
 import SideBar from '../../components/SideBar/SideBar';
 import NavBar from '../../components/NavBar/NavBar';
-import { NavListType } from '../../types/NavListType';
 
 const LayoutPage: React.FC = () => {
 	const [page, setPage] = useState('Home');
 	const currentLocation = useLocation().pathname.toLowerCase();
 	
 	useEffect(() => {
-		NavList.find((page: NavListType)=> {
+		NavList.find((page: { name: string, path: string }) => {
 			if (page.path === currentLocation)
 				setPage(page.name);
 		});

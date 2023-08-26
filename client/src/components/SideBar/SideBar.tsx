@@ -1,11 +1,10 @@
 import { Main } from './styles';
 import { NavList } from '../../data/constants';
-import { NavListType } from '../../types/NavListType';
 import SideBarItem from '../SideBarItem/SideBarItem';
 
 const SideBar: React.FC = () => (
 	<Main>
-		{ NavList.map((item: NavListType) => {
+		{ NavList.map((item: { name: string }) => {
 			return <SideBarItem key={item.name} route={item} />;
 		})}
 	</Main>

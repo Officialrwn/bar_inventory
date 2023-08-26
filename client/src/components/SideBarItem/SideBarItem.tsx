@@ -1,8 +1,8 @@
-import { NavListType } from '../../types/NavListType'
+import { StringKeyObject } from '../../types/types'
 import { Main, NavLink, NavIcon } from './styles'
 
 type RouteType = {
-	route: NavListType
+	route: StringKeyObject<string>
 }
 
 const SideBarItem: React.FC<RouteType> = ({route}) => {

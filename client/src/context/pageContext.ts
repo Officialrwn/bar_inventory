@@ -1,4 +1,4 @@
 import { createContext } from 'react';
-import { PageContextType } from '../types/PageContextType';
+import { StringKeyObject } from '../types/types';
 
-export const PageContext = createContext<PageContextType | null>(null);
+export const PageContext = createContext<StringKeyObject<string> | null>(null);
