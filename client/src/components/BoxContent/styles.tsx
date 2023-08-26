@@ -11,6 +11,7 @@ const Main = styled.div`
 			flex: 1;
 		}
 	}
+	margin-bottom: 1vh;
 `;
 
 const Title = styled.p<{ $index: number }>`

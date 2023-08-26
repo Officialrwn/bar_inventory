@@ -8,10 +8,11 @@ const BoxHeaderIcons: React.FC = () => {
 	const change = require('../../assets/images/change.png');
 	const { category } = useContext(BoxComponentContext) as BoxComponentType;
 
+	const addIcon = category.icons.add ? <IconBox><Icon src={add} alt={add}/><IconDesc>Add Product</IconDesc></IconBox> : null;
+	const changeIcon = category.icons.changeOrder ? <IconBox><Icon src={change} alt={change}/><IconDesc>Change Order</IconDesc></IconBox> : null;
 	return	(
 		<Main>
-			{ category.icons.add ? <IconBox><Icon src={add} alt={add}/><IconDesc>Add Product</IconDesc></IconBox> : null }
-			{	category.icons.changeOrder ? <IconBox><Icon src={change} alt={change}/><IconDesc>Change Order</IconDesc></IconBox> : null	}
+			{[addIcon, changeIcon]}
 		</Main>
 	)
 }

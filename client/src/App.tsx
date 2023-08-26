@@ -1,23 +1,21 @@
 import './assets/css/app.css';
 import './assets/fonts/Inria_Sans/InriaSans-Bold.ttf';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LayoutPage from './pages/LayoutPage/LayoutPage';
-import HomePage from './pages/HomePage/HomePage';
-import DailyReportPage from './pages/DailyReportPage/DailyReportPage';
-import InventoryPage from './pages/InventoryPage/InventoryPage';
-import ErrorPage from './pages/ErrorPage/ErrorPage';
+import { routesList } from './routes';
+import * as route from './pages'
 
 const App = () => {
+	const routeComponents = routesList.map((route, index) => (
+		<Route key={index} path={route.path} element={<route.element/>}/>
+	))
+	
   return (
     <div className="App">
 			<BrowserRouter>
 				<Routes>
-					<Route path="/" element={<LayoutPage/>}>
-						<Route index element={<HomePage/>}/>
-						<Route path="home" element={<HomePage/>}/>
-						<Route path="/dailyreport" element={<DailyReportPage/>}/>
-						<Route path="/inventory" element={<InventoryPage/>}/>
-						<Route path="*" element={<ErrorPage/>}/>
+					<Route path="/" element={<route.LayoutPage/>}>
+						<Route index element={<route.HomePage/>}/>
+						{routeComponents}
 					</Route>
 				</Routes>
 			</BrowserRouter>

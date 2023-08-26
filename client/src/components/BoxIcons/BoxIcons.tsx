@@ -7,11 +7,12 @@ const BoxIcons: React.FC = () => {
 	const modify = require('../../assets/images/modify.png');
 	const remove = require('../../assets/images/delete.png');
 	const { category } = useContext(BoxComponentContext) as BoxComponentType;
-
+	
+	const modifyIcon = category.icons.modify ? <Icon src={modify} alt={modify}/> : null;
+	const removeIcon = category.icons.remove ? <Icon src={remove} alt={remove}/> : null;
 	return	(
 		<Main>
-			{ category.icons.modify ? <Icon src={modify} alt={modify}/> : null }
-			{	category.icons.remove ? <Icon src={remove} alt={remove}/> : null }
+			{[modifyIcon, removeIcon]}
 		</Main>
 	)
 }
