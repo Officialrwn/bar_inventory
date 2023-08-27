@@ -12,7 +12,7 @@ const IconBox = styled.div`
 `
 
 const Icon = styled.img`
-	max-height: 60%;
+	max-height: 3.5vh;
 	padding-left: 1vw;
 `;
 

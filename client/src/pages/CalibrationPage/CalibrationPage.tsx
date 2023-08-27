@@ -1,11 +1,10 @@
 import BoxComponent from '../../components/BoxComponent/BoxComponent'
 import { Main } from './styles'
-import { tapInventory, bottleInventory } from '../../data/constants'
+import { tapCalibration } from '../../data/constants'
 
 const CalibrationPage: React.FC = () => (
 	<Main>
-		<BoxComponent category={tapInventory}/>
-		<BoxComponent category={bottleInventory}/>
+		<BoxComponent category={tapCalibration}/>
 	</Main>
 )
 

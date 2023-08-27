@@ -6,11 +6,14 @@ const Main = styled.div`
 	justify-content: space-evenly;
 	background-color: white;
 	min-height: 5vh;
+	padding-left: 1vw;
+	padding-right: 1vw;
 `;
 
 const Icon = styled.img`
-	max-width: 30%;
+	max-width: 3vh;
 	margin-top: 0.2vh;
+
 `;
 
 export { 
