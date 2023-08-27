@@ -7,14 +7,14 @@ import SideBar from '../../components/SideBar/SideBar';
 import NavBar from '../../components/NavBar/NavBar';
 
 const LayoutPage: React.FC = () => {
-	const [page, setPage] = useState('Home');
+	const [page, setPage] = useState<string>('Home');
 	const currentLocation = useLocation().pathname.toLowerCase();
-	
+
 	useEffect(() => {
-		NavList.find((page: { name: string, path: string }) => {
-			if (page.path === currentLocation)
-				setPage(page.name);
-		});
+		const newLocation = NavList.find((page) => page.path === currentLocation)
+		if (newLocation) {
+			setPage(newLocation.name);
+		}
 	},[currentLocation]);	
 
 	return	(
