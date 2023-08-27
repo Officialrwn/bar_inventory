@@ -3,7 +3,7 @@ import { NavList } from '../../data/constants';
 import SideBarItem from '../SideBarItem/SideBarItem';
 
 const SideBar: React.FC = () => {
-	const sideBarComponents = NavList.map((item: { name: string }) => (
+	const sideBarComponents = NavList.map((item) => (
 		<SideBarItem key={item.name} route={item} />
 	))
 	return (

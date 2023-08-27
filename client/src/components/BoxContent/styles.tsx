@@ -10,9 +10,6 @@ const Main = styled.div`
 		&:nth-child(4) {
 			flex: 1;
 		}
-		&:nth-child(6) {
-			flex: 2;
-		}
 	}
 	margin-bottom: 1vh;
 `;
@@ -20,7 +17,6 @@ const Main = styled.div`
 const ItemBox = styled.div`
 	display: flex;
 	flex-direction: column;
-
 `
 
 export { 

@@ -15,9 +15,7 @@ const BoxContent: React.FC = () => {
 	))
 
 	return	(
-		<Main>
-			{itemBoxComponent}
-		</Main>
+		<Main>{itemBoxComponent}</Main>
 	)
 }
 

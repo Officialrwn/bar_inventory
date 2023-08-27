@@ -16,8 +16,8 @@ const BoxTitles: React.FC<BoxTitlesType> = ({title, index}) => {
 	const titleUnit = title.unit ? `(${title.unit})` : '';
 	return (
 		<Title $index={index}>
-			{ titleName }<br/>
-			{ titleUnit }
+			{titleName}<br/>
+			{titleUnit}
 		</Title>
 	)
 }
