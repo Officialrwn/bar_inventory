@@ -13,7 +13,7 @@ const Main = styled.div`
 const Icon = styled.img`
 	max-width: 3vh;
 	margin-top: 0.2vh;
-
+	padding-left: 1vh;
 `;
 
 export { 
