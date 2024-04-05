@@ -1,0 +1,1 @@
+DELETE FROM productlist WHERE PRODUCT_NAME = $1;

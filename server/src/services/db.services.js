@@ -11,4 +11,15 @@ const createProduct = async (item) => {
 	}
 }
 
-export { createProduct };
+const removeProduct = async (productName) => {
+	try {
+		const query = loadSqlQuery('db.removeproduct.sql');
+		return	await pool.query(query, productName);
+	}
+	catch (err) {
+		console.error("Failed to remove from db\n", err);
+		return "";
+	}
+}
+
+export { createProduct, removeProduct };

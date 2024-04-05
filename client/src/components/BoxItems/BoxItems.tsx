@@ -8,11 +8,10 @@ import BoxIcons from '../BoxIcons/BoxIcons';
 const BoxItems: React.FC<StringKeyObject<number>> = ({index}) => {
 	const { category } = useContext(BoxComponentContext) as BoxComponentType;
 	const lastIndex = category.titles.length - 1;
-
 	const boxItemsComponent = category.products.map((item: string[], i: number) => (
 		index !== lastIndex
 		?	<BoxItem key={i} $index={index}>{item[index]}</BoxItem>
-		: <BoxIcons key={i}/>
+		: <BoxIcons key={i} productname={item[0]}/>
 	))
 	return (
 		<Main>{boxItemsComponent}</Main>

@@ -4,8 +4,8 @@ const tapCalibration = {
 		{ name: 'Item Name', unit: '' },
 		{ name: 'Start', unit: 'tap num' },
 		{ name: 'Current', unit: 'tap num' },
-		{ name: 'Difference', unit: 'qty' },
 		{ name: '', unit: '' },
+		{ name: 'Difference', unit: 'qty' },
 		{ name: 'New End', unit: 'tap num' },
 		{ name: 'icons', unit: '' },
 	],
@@ -43,7 +43,7 @@ const bottleCalibration = {
 		{ name: 'Current', unit: 'bottles' },
 		{ name: '', unit: '' },
 		{ name: 'Difference', unit: 'qty' },
-		{ name: 'New End', unit: 'qty' },
+		{ name: 'New End', unit: '....qty' },
 		{ name: 'icons', unit: '' },
 	],
 	products: [

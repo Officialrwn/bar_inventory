@@ -1,4 +1,4 @@
-import { createProduct } from '../services/db.services.js';
+import { createProduct, removeProduct } from '../services/db.services.js';
 import { checkProductType } from '../utils/producttype.js'
 
 const getProductListItem = () => {
@@ -12,27 +12,28 @@ const addProductListItem = async (items, type) => {
 			.map(async (item) => {
 				const data = { ...item, productType: type };
 				const res = await createProduct(Object.values(data));
-				console.log("Success! Inserted: ", res.rows);
+				console.log("Success! Inserted/Updated: ", res.rows);
 				return data.name;
 			})
 		)
 	} catch (err) {
-		console.error("Failed to insert item: ", err);
+		console.error("Failed to insert/update item: ", err);
 	}
 }
 
-const updateProductListItem = () => {
-	console.log("to do");
-}
-
-const removeProductListItem = () => {
-	console.log("to do");
+const removeProductListItem = async (productName) => {
+	try {
+				const res = await removeProduct(productName);
+				console.log("Success! Removed: ", res.rows);
+				return productName;
+	} catch (err) {
+		console.error("Failed to remove item: ", err);
+	}
 }
 
 export {
 	checkProductType,
 	getProductListItem,
 	addProductListItem,
-	updateProductListItem,
 	removeProductListItem
 };
