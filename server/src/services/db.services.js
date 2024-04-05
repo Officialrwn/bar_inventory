@@ -1,6 +1,16 @@
 import { pool } from '../configs/db.config.js';
 import { loadSqlQuery } from '../utils/filequery.js';
 
+const getProductList = async () => {
+	try {
+		const query = loadSqlQuery('db.getproductlist.sql');
+		return await pool.query(query);
+	} catch (err) {
+		console.error("Failed to query db\n", err);
+		return "";
+	}
+}
+
 const createProduct = async (item) => {
 	try {
 		const query = loadSqlQuery('db.createproduct.sql');
@@ -22,4 +32,4 @@ const removeProduct = async (productName) => {
 	}
 }
 
-export { createProduct, removeProduct };
+export { createProduct, removeProduct, getProductList };

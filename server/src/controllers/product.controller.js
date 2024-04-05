@@ -1,8 +1,14 @@
-import { createProduct, removeProduct } from '../services/db.services.js';
+import { createProduct, removeProduct, getProductList } from '../services/db.services.js';
 import { checkProductType } from '../utils/producttype.js'
 
-const getProductListItem = () => {
-	console.log("to do");
+const getProductListItem = async () => {
+	try {
+		const res = await getProductList();
+		console.log("Success fetched productlist ", res.rows);
+		return res.rows;
+	} catch (err) {
+	console.error("Failed to remove item: ", err);
+	}
 }
 
 const addProductListItem = async (items, type) => {
