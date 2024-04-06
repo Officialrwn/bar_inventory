@@ -29,13 +29,21 @@ app.post('/api/products/remove', async (req, res) => {
 		res.sendStatus(500);
 	} else {
 		const data = await removeProductListItem(req.body);
-		console.log("DATA", data);
+		// console.log("DATA", data);
 		const response = {
 			"Status": "Success",
 			"Operation": "Removed product",
-			"Data": data
+			"Data": req.body.productName + " has been removed"
 		}
-		res.status(200).json(response);
+		if (data.rowCount > 0) {
+			res.status(200).json(response);
+		} else {
+			res.status(500).json({
+				"Status": "Failed",
+				"Operation": "Remove product",
+				"Message": req.body.productName + " not found"
+			});
+		}
 	}
 })
 

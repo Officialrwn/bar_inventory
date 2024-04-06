@@ -31,7 +31,7 @@ const removeProductListItem = async (item) => {
 	try {
 		const res = await removeProduct(item);
 		console.log("Success! Removed: ", item.productName);
-		return item.productName;
+		return res;
 	} catch (err) {
 		console.error("Failed to remove item: ", err);
 	}
