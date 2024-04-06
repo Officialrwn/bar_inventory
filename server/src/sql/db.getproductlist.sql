@@ -1,2 +1,2 @@
 -- Get product list 20 rows
-SELECT * FROM product LIMIT 20;
+SELECT * FROM productlist LIMIT 20;

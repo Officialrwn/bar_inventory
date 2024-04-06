@@ -27,11 +27,11 @@ const addProductListItem = async (items, type) => {
 	}
 }
 
-const removeProductListItem = async (productName) => {
+const removeProductListItem = async (item) => {
 	try {
-				const res = await removeProduct(productName);
-				console.log("Success! Removed: ", res.rows);
-				return productName;
+		const res = await removeProduct(item);
+		console.log("Success! Removed: ", item.productName);
+		return item.productName;
 	} catch (err) {
 		console.error("Failed to remove item: ", err);
 	}
