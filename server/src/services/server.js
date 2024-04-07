@@ -13,10 +13,6 @@ app.use(express.json());
 
 Object.keys(apiroutes).map((route) => app.use(apiroutes[route]));
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-})
-
 const init = () => {
 	app.listen(port, () => {
 		console.log(`Listening on port ${port}`)

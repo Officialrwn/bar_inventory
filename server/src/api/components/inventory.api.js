@@ -1,19 +1,19 @@
 import express from 'express';
-import { checkProductType, getProductListItem, addProductListItem, removeProductListItem } from '../../controllers/product.controller.js';
+import { getInventoryItems, addInventoryItems, removeInventoryItems } from '../../controllers/inventory.controller.js';
 
 const app = express();
 
-app.get('/api/products', async (req, res) => {
-		const data = await getProductListItem();
+app.get('/api/inventory', async (req, res) => {
+		const data = await getInventoryItems();
 		console.log("DATA", data);
 		res.status(200).json(data);
 })
 
-app.post('/api/products/add', async (req, res) => {
-	if (!req.body || !checkProductType(req.query.type)) {
+app.post('/api/inventory/add', async (req, res) => {
+	if (!req.body) {
 		res.sendStatus(500);
 	} else {
-		const data = await addProductListItem(req.body, req.query.type);
+		const data = await addInventoryItems(req.body);
 		console.log("DATA", data);
 		const response = {
 			"Status": "Success",
@@ -28,12 +28,12 @@ app.post('/api/products/remove', async (req, res) => {
 	if (!req.body) {
 		res.sendStatus(500);
 	} else {
-		const data = await removeProductListItem(req.body);
+		const data = await removeInventoryItems(req.body);
 		// console.log("DATA", data);
 		const response = {
 			"Status": "Success",
 			"Operation": "Removed product",
-			"Data": req.body.productName + " has been removed"
+			"Data": req.body.inventoryName + " has been removed"
 		}
 		if (data.rowCount > 0) {
 			res.status(200).json(response);
@@ -41,16 +41,10 @@ app.post('/api/products/remove', async (req, res) => {
 			res.status(500).json({
 				"Status": "Failed",
 				"Operation": "Remove product",
-				"Message": req.body.productName + " not found"
+				"Message": req.body.inventoryName + " not found"
 			});
 		}
 	}
-})
-
-app.get('/api/products', async (req, res) => {
-	const data = await getProductListItem();
-	console.log("DATA", data);
-	res.status(200).json(data);
 })
 
 app.post('/api/products/add', async (req, res) => {
@@ -68,4 +62,4 @@ if (!req.body || !checkProductType(req.query.type)) {
 }
 })
 
-export { app as productApiRoutes };
+export { app as inventoryApiRoutes };
