@@ -1,4 +1,4 @@
-import { getInventoryList, addProductToInventory } from '../services/db.services.js';
+import { getInventoryList, addProductToInventory, removeProductFromInventory } from '../services/db.services.js';
 
 const getInventoryItems = async () => {
 	try {
@@ -24,8 +24,14 @@ const addInventoryItems = async (items) => {
 	}
 }
 
-const removeInventoryItems = async (items) => {
-	console.log("remove items");
+const removeInventoryItems = async (item) => {
+	try {
+		const res = await removeProductFromInventory(item);
+		console.log("Success! Removed: ", item.inventoryName);
+		return res;
+	} catch (err) {
+		console.error("Failed to remove item: ", err);
+	}
 }
 
 export { 

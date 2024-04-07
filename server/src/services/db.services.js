@@ -55,10 +55,10 @@ const addProductToInventory = async (item) => {
 	}
 }
 
-const removeProductFromInventory = async () => {
+const removeProductFromInventory = async (item) => {
 	try {
-		const query = loadSqlQuery('db.getinventorylist.sql');
-		return await pool.query(query);
+		const query = loadSqlQuery('db.removeinventory.sql');
+		return await pool.query(query, [item.inventoryName]);
 	} catch (err) {
 		console.error("Failed to query db\n", err);
 		return "";
@@ -70,5 +70,6 @@ export {
 	removeProduct, 
 	getProductList, 
 	getInventoryList,
-	addProductToInventory
+	addProductToInventory,
+	removeProductFromInventory
 };
