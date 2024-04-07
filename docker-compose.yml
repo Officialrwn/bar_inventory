@@ -13,6 +13,7 @@ services:
       - /app/node_modules/
     depends_on:
       - postgres
+    restart: always
   client:
     build: 
       context: ./client
@@ -23,6 +24,7 @@ services:
       - ./client:/app
       - /app/node_modules/
     stdin_open: true
+    restart: always
   postgres:
     container_name: "psql"
     image: postgres
