@@ -24,6 +24,21 @@ app.post('/api/inventory/add', async (req, res) => {
 	}
 })
 
+app.post('/api/inventory/update', async (req, res) => {
+	if (!req.body) {
+		res.sendStatus(500);
+	} else {
+		const data = await updateInventoryItems(req.body);
+		console.log("DATA", data);
+		const response = {
+			"Status": "Success",
+			"Operation": "Update product",
+			"Data": data.rows
+		}
+		res.status(200).json(response);
+	}
+})
+
 app.post('/api/inventory/remove', async (req, res) => {
 	if (!req.body) {
 		res.sendStatus(500);
