@@ -5,40 +5,18 @@
 		"fullBottle": 0,
 		"openBottle": 0
 	},
-	"calibration_data": {
-		"startStock": 0,
-		"endStock": 0,
-		"startFullBottle": 0,
-		"startOpenBottle": 0,
-		"endFullBottle": 0,
-		"endOpenBottle": 0,
-		"difference": 0,
-		"fullBottle": 0,
-		"bottleWeight": 0
-	},
-	"sales_numbers": {
-		"expectedSales": 0,
-		"realSales": 0,
-		"cash": 0,
-		"card": 0,
-		"other": 0,
-		"difference": 0
-	},
-	"sales_data": [
+	"calibration_data": [
 		{
-			"inventory_name": "",
-			"sold": 0,
-			"loss": 0,
+			"inventoryName": "",
+			"startStock": 0,
+			"endStock": 0,
+			"startFullBottle": 0,
+			"startOpenBottle": 0,
+			"endFullBottle": 0,
+			"endOpenBottle": 0,
 			"difference": 0,
-			"data": {
-				"startStock": 0,
-				"endStock": 0,
-				"startFullBottle": 0,
-				"startOpenBottle": 0,
-				"endFullBottle": 0,
-				"endOpenBottle": 0,
-				"bottleWeight": 0
-			}
+			"fullBottle": 0,
+			"bottleWeight": 0
 		}
 	]
 }
