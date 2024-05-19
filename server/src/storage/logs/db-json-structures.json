@@ -24,16 +24,21 @@
 		"other": 0,
 		"difference": 0
 	},
-	"sales_data": {
-		"sold": 0,
-		"loss": 0,
-		"difference": 0,
-		"startStock": 0,
-		"endStock": 0,
-		"startFullBottle": 0,
-		"startOpenBottle": 0,
-		"endFullBottle": 0,
-		"endOpenBottle": 0,
-		"bottleWeight": 0
-	}
+	"sales_data": [
+		{
+			"inventory_name": "",
+			"sold": 0,
+			"loss": 0,
+			"difference": 0,
+			"data": {
+				"startStock": 0,
+				"endStock": 0,
+				"startFullBottle": 0,
+				"startOpenBottle": 0,
+				"endFullBottle": 0,
+				"endOpenBottle": 0,
+				"bottleWeight": 0
+			}
+		}
+	]
 }
