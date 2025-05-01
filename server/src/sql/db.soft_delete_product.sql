@@ -1,0 +1,4 @@
+UPDATE productlist
+SET DELETED = true
+WHERE PRODUCT_ID = $1
+RETURNING *;

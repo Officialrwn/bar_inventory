@@ -1,4 +1,3 @@
-UPDATE productlist
-SET DELETED = true
+DELETE FROM productlist
 WHERE PRODUCT_ID = $1
 RETURNING *;
