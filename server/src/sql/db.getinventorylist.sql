@@ -1,1 +1,0 @@
-SELECT * FROM inventorylist LIMIT 100;
